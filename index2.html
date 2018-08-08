@@ -22,12 +22,12 @@
   <button data-person="Baseball">Baseball</button>
   <button data-person="Bat">Bat</button>
 
-  <div id="movies-view">
+  <div id="topics-view">
 
-    <form id="movie-form">
-      <label for="movie-input">Add a Topic</label>
-      <input type="text" id="movie-input"><br>
-      <input id="add-movie" type="submit" value="Add a Topic">
+    <form id="topic-form">
+      <label for="topic-input">Add a Topic</label>
+      <input type="text" id="topic-input"><br>
+      <input id="add-topic" type="submit" value="Add a Topic">
     </form>
 
   <div id="gifs-appear-here">
@@ -83,13 +83,13 @@
               $("#gifs-appear-here").prepend(gifDiv);
           
           // This function handles events where one button is clicked
-      $("#add-movie").on("click", function(event) {
+      $("#add-topic").on("click", function(event) {
         // event.preventDefault() prevents the form from trying to submit itself.
         // We're using a form so that the user can hit enter instead of clicking the button if they want
         event.preventDefault();
 
         // This line will grab the text from the input box
-        var person = $("#movie-input").val().trim();
+        var person = $("#topic-input").val().trim();
         // The movie from the textbox is then added to our array
         person.push(persons);
 
